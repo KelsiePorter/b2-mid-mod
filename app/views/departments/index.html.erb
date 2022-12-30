@@ -1,0 +1,19 @@
+<h1>Departments Index Page</h1>
+
+<% @departments.each do |department| %>
+<%# below is the id needed to use teh within blocks  %>
+  <div id="department-<%= department.id %>">
+    <p><strong> Department Name: </strong><%= department.name %></p>
+    <p><strong> Department Floor: </strong><%= department.floor %></p>
+    <p><strong> Employees: </strong></p>
+    <%# make sure to move this iteration down to a new line like below  %>
+      <% department.employee_names.each do |name| %>
+      <%# employee_names is a model method that I created in the department
+      model to abstract the work of just plucking the employee's name istead
+      of all of the employees attributes. Don't for get a model test now %>
+      <%= name %><br>
+    <% end %>
+    <%# make sure you close the DIV tag!! Otherwise the within blocks won't work  %>
+  </div>
+      --------------------------------------------
+<% end %>
