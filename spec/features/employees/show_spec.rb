@@ -57,19 +57,17 @@ RSpec.describe 'the employees show page' do
 
     expect(page).to have_content("Employee's Oldest Ticket: Subject: #{@ticket_3.subject} Age: #{@ticket_3.age}")
   end
-  # US3
-  it 'displays a form to assign a ticket to the employee' do 
+  # US 3
+  it 'displays a form to assign an existing ticket to an employee' do
     visit "/employees/#{@employee_1.id}"
 
     expect(page).to_not have_content(@ticket_4.subject)
-    expect(page).to_not have_content(@ticket_4.age)
-    expect(page).to have_content("Assign a ticket using ticket id")
+    expect(page).to have_content("Assign a ticket to an employee")
 
     fill_in "Ticket", with: @ticket_4.id
     click_on "Assign Ticket"
 
     expect(current_path).to eq("/employees/#{@employee_1.id}")
     expect(page).to have_content(@ticket_4.subject)
-    expect(page).to have_content(@ticket_4.age)
   end
 end
