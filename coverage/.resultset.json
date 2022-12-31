@@ -246,6 +246,9 @@
           null,
           1,
           null,
+          null,
+          null,
+          1,
           null
         ]
       },
@@ -261,7 +264,7 @@
           1,
           null,
           1,
-          3,
+          0,
           null,
           null
         ]
@@ -277,18 +280,57 @@
         "lines": [
           1,
           1,
+          1,
+          1,
           null,
+          1,
+          4,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          9,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          6,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/kelsieporter/turing/mod_2/independent_challenges/b2-mid-mod/app/models/ticket.rb": {
+        "lines": [
+          1,
           1,
           1,
           null
         ]
       },
-      "/Users/kelsieporter/turing/mod_2/independent_challenges/b2-mid-mod/app/controllers/departments_controller.rb": {
+      "/Users/kelsieporter/turing/mod_2/independent_challenges/b2-mid-mod/app/models/employee_ticket.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/kelsieporter/turing/mod_2/independent_challenges/b2-mid-mod/app/controllers/employees_controller.rb": {
         "lines": [
           1,
           null,
           1,
-          1,
+          3,
           null,
           null
         ]
@@ -300,6 +342,6 @@
         ]
       }
     },
-    "timestamp": 1672447941
+    "timestamp": 1672452435
   }
 }

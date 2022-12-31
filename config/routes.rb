@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   #departments
   get '/departments', to: 'departments#index'
   # The above will create a route to display all department instances
+
+  #employees
+  get '/employees/:id', to: 'employees#show'
 end

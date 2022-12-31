@@ -1,0 +1,16 @@
+<h1><%= @employee.name %>'s Show Page</h1>
+<h3><strong>Department: </strong><%= @employee.department_name %></h3>
+
+<p><strong>Employee's Assigned Tickets: </strong></p>
+<% @employee.assigned_tickets.each do |ticket| %>
+  <p><strong>Subject: </strong><%= ticket.subject %></p>
+  <p><strong>Age: </strong><%= ticket.age %></p>
+  ------------------------------------
+<% end %>
+
+<p><strong>Employee's Oldest Ticket: </strong><br>
+<strong>Subject: </strong><%= @employee.oldest_ticket.subject %><br>
+<strong>Age: </strong><%= @employee.oldest_ticket.age %></p>
+
+
+
