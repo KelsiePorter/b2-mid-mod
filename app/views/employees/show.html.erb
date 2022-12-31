@@ -1,10 +1,15 @@
 <h1><%= @employee.name %>'s Show Page</h1>
 <h3><strong>Department: </strong><%= @employee.department_name %></h3>
+<h3><strong>Level: </strong><%= @employee.level %></h3>
 
 <p><strong>Employee's Assigned Tickets: </strong></p>
 <% @employee.assigned_tickets.each do |ticket| %>
   <p><strong>Subject: </strong><%= ticket.subject %></p>
   <p><strong>Age: </strong><%= ticket.age %></p>
+  <p><strong>Other employees assigned to this ticket: </strong></p>
+    <% ticket.assigned_employees.each do |employee| %>
+      <%= employee %><br>
+    <% end %>
   ------------------------------------
 <% end %>
 

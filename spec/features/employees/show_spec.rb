@@ -72,4 +72,21 @@ RSpec.describe 'the employees show page' do
     expect(page).to have_content(@ticket_4.subject)
     expect(page).to have_content(@ticket_4.age)
   end
+  # Extension
+  it 'displays the employees level attribute' do 
+    visit "/employees/#{@employee_1.id}"
+
+    expect(page).to have_content("Level: #{@employee_1.level}")
+  end
+  # Extension
+  it 'displays all employees that share the same ticket' do 
+    @employee_2.tickets << @ticket_1
+    @employee_3.tickets << @ticket_1
+
+    visit "/employees/#{@employee_1.id}"
+
+    expect(page).to have_content("Other employees assigned to this ticket")
+    expect(page).to have_content(@employee_2.name)
+    expect(page).to have_content(@employee_3.name)
+  end
 end
