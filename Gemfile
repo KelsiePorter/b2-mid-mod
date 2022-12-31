@@ -43,6 +43,7 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-pride'
   gem 'simplecov'
+  gem 'orderly'
 end
 
 group :development do
