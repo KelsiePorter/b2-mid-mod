@@ -32,7 +32,7 @@ RSpec.describe Employee, type: :model do
       @employee_6.tickets << @ticket_2
       @employee_6.tickets << @ticket_4
     end
-
+    # US2
     describe '#department_name' do 
       it 'returns the department name for the employee' do 
 
@@ -43,7 +43,7 @@ RSpec.describe Employee, type: :model do
         expect(@employee_5.department_name).to_not eq('Accounting')
       end
     end
-
+    # US2
     describe '#assigned_tickets' do 
       it 'displays the employees assigned tickets from oldest to youngest' do 
 

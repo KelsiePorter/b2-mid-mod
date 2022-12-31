@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-12-30T19:07:15-07:00">2022-12-30T19:07:15-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-12-30T20:41:50-07:00">2022-12-30T20:41:50-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  98.57%
+  98.72%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.26
+         1.42
        </span>
     </span> hits/line
     )
@@ -39,15 +39,15 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>22</b> files in total.
+    <b>23</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>70</b> relevant lines,
-    <span class="green"><b>69</b> lines covered</span> and
+    <b>78</b> relevant lines,
+    <span class="green"><b>77</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed. </span>
     (<span class="green">
-  98.57%
+  98.72%
 </span>
 )
   </div>
@@ -82,13 +82,24 @@
           </tr>
         
           <tr class="t-file">
+            <td class="strong t-file__name"><a href="#6c5e67b45926d7a47433e9e4bbfbf8d3380a743f" class="src_link" title="app/controllers/employee_tickets_controller.rb">app/controllers/employee_tickets_controller.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">14</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.14</td>
+            
+          </tr>
+        
+          <tr class="t-file">
             <td class="strong t-file__name"><a href="#65e8365016186772035373327119e4c75a7c807b" class="src_link" title="app/controllers/employees_controller.rb">app/controllers/employees_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">6</td>
             <td class="cell--number">3</td>
             <td class="cell--number">3</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.67</td>
+            <td class="cell--number">2.33</td>
             
           </tr>
         
@@ -128,11 +139,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#d5d922a3e65cfe496706fbe05bdc2c0f1c427739" class="src_link" title="app/models/employee.rb">app/models/employee.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">29</td>
+            <td class="cell--number">30</td>
             <td class="cell--number">10</td>
             <td class="cell--number">10</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.60</td>
+            <td class="cell--number">3.80</td>
             
           </tr>
         
@@ -304,9 +315,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#5ed222ddf752b28ec4a00b1d0a8de81bf4ac8726" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">3</td>
+            <td class="cell--number">13</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -382,6 +393,191 @@
 </div>
 
       
+        <div class="source_table" id="6c5e67b45926d7a47433e9e4bbfbf8d3380a743f">
+  <div class="header">
+    <h3>app/controllers/employee_tickets_controller.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>7</b> relevant lines.
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">class EmployeeTicketsController &lt; ApplicationController </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def create</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    EmployeeTicket.create(permitted_params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    redirect_to &quot;/employees/#{permitted_params[:employee_id]}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="9">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  private </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def permitted_params</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="12">
+            <span class="hits">2</span>
+            
+
+            
+
+            <code class="ruby">    params.permit(:ticket_id, :employee_id)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="13">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
         <div class="source_table" id="65e8365016186772035373327119e4c75a7c807b">
   <div class="header">
     <h3>app/controllers/employees_controller.rb</h3>
@@ -442,8 +638,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="3" data-linenumber="4">
-            <span class="hits">3</span>
+          <li class="covered" data-hits="5" data-linenumber="4">
+            <span class="hits">5</span>
             
 
             
@@ -797,8 +993,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="7">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="6" data-linenumber="7">
+            <span class="hits">6</span>
             
 
             
@@ -885,8 +1081,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="9" data-linenumber="15">
-            <span class="hits">9</span>
+          <li class="covered" data-hits="15" data-linenumber="15">
+            <span class="hits">15</span>
             
 
             
@@ -973,8 +1169,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="6" data-linenumber="23">
-            <span class="hits">6</span>
+          <li class="covered" data-hits="10" data-linenumber="23">
+            <span class="hits">10</span>
             
 
             
@@ -990,7 +1186,7 @@
 
             
 
-            <code class="ruby">    # this takes the assigned_tickets method above and returns the first ticket</code>
+            <code class="ruby">    # For US2</code>
           </li>
         </div>
       
@@ -1001,7 +1197,7 @@
 
             
 
-            <code class="ruby">    # becasue the above method already has them sorted from oldest to youngest.</code>
+            <code class="ruby">    # this takes the assigned_tickets method above and returns the first ticket</code>
           </li>
         </div>
       
@@ -1012,7 +1208,7 @@
 
             
 
-            <code class="ruby">    # The last part of US2 just needs the oldest ticket. If we needed the </code>
+            <code class="ruby">    # becasue the above method already has them sorted from oldest to youngest.</code>
           </li>
         </div>
       
@@ -1023,7 +1219,7 @@
 
             
 
-            <code class="ruby">    # youngest, we could do assigned_tickets.last</code>
+            <code class="ruby">    # The last part of US2 just needs the oldest ticket. If we needed the </code>
           </li>
         </div>
       
@@ -1034,12 +1230,23 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">    # youngest, we could do assigned_tickets.last</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
@@ -3656,8 +3863,8 @@
     
 
     <div class="t-line-summary">
-      <b>3</b> relevant lines.
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3769,6 +3976,39 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
+            
+            
+
+            
+
+            <code class="ruby">  #employee_tickets</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  post &#39;/employee_tickets&#39;, to: &#39;employee_tickets#create&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 

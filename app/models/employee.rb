@@ -21,6 +21,7 @@ class Employee < ApplicationRecord
 
   def oldest_ticket
     assigned_tickets.first 
+    # For US2
     # this takes the assigned_tickets method above and returns the first ticket
     # becasue the above method already has them sorted from oldest to youngest.
     # The last part of US2 just needs the oldest ticket. If we needed the 

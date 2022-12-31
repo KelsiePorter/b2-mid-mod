@@ -21,12 +21,9 @@ RSpec.describe 'the employees show page' do
     @employee_1.tickets << @ticket_1
     @employee_1.tickets << @ticket_2
     @employee_1.tickets << @ticket_3
-    @employee_6.tickets << @ticket_1
-    @employee_6.tickets << @ticket_2
-    @employee_6.tickets << @ticket_4
     # This is one way to associate a ticket with an employee
   end
-
+  # US2
   it 'displays the employees name and department' do 
     visit "/employees/#{@employee_1.id}"
 
@@ -37,7 +34,7 @@ RSpec.describe 'the employees show page' do
     expect(page).to_not have_content(@employee_2.name)
     expect(page).to_not have_content(@marketing.name)
   end
-
+  # US2
   it 'displays all of the employees tickets from oldest to youngest' do 
     visit "/employees/#{@employee_1.id}"
 
@@ -54,10 +51,25 @@ RSpec.describe 'the employees show page' do
     expect(@ticket_2.subject).to appear_before(@ticket_1.subject)
     expect(@ticket_1.subject).to_not appear_before(@ticket_3.subject)
   end
-
+  # US2
   it 'displays a the oldest ticket assigned in a seperate list' do 
     visit "/employees/#{@employee_1.id}"
 
     expect(page).to have_content("Employee's Oldest Ticket: Subject: #{@ticket_3.subject} Age: #{@ticket_3.age}")
+  end
+  # US3
+  it 'displays a form to assign a ticket to the employee' do 
+    visit "/employees/#{@employee_1.id}"
+
+    expect(page).to_not have_content(@ticket_4.subject)
+    expect(page).to_not have_content(@ticket_4.age)
+    expect(page).to have_content("Assign a ticket using ticket id")
+
+    fill_in "Ticket", with: @ticket_4.id
+    click_on "Assign Ticket"
+
+    expect(current_path).to eq("/employees/#{@employee_1.id}")
+    expect(page).to have_content(@ticket_4.subject)
+    expect(page).to have_content(@ticket_4.age)
   end
 end

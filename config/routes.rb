@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   #employees
   get '/employees/:id', to: 'employees#show'
+
+  #employee_tickets
+  post '/employee_tickets', to: 'employee_tickets#create'
 end
