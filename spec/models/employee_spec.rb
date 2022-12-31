@@ -19,6 +19,18 @@ RSpec.describe Employee, type: :model do
       @employee_4 = Employee.create!(name: 'Ryan Gosling', level: 5, department_id: @accounting.id)
       @employee_5 = Employee.create!(name: 'Keri Russell', level: 7, department_id: @marketing.id)
       @employee_6 = Employee.create!(name: 'JC Chasez', level: 7, department_id: @marketing.id)
+
+      @ticket_1 = Ticket.create!(subject: "Fix WiFi", age: 5)
+      @ticket_2 = Ticket.create!(subject: "New Employee Hardware", age: 6)
+      @ticket_3 = Ticket.create!(subject: "Software Update", age: 7)
+      @ticket_4 = Ticket.create!(subject: "Fix AC", age: 8)
+
+      @employee_1.tickets << @ticket_1
+      @employee_1.tickets << @ticket_2
+      @employee_1.tickets << @ticket_3
+      @employee_6.tickets << @ticket_1
+      @employee_6.tickets << @ticket_2
+      @employee_6.tickets << @ticket_4
     end
 
     describe '#department_name' do 
@@ -29,6 +41,13 @@ RSpec.describe Employee, type: :model do
         expect(@employee_3.department_name).to eq('Accounting')
         expect(@employee_5.department_name).to eq('Marketing')
         expect(@employee_5.department_name).to_not eq('Accounting')
+      end
+    end
+
+    describe '#assigned_tickets' do 
+      it 'displays the employees assigned tickets from oldest to youngest' do 
+
+        expect(@employee_1.assigned_tickets).to eq([@ticket_3, @ticket_2, @ticket_1])
       end
     end
   end
