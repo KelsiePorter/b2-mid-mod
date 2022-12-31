@@ -13,10 +13,9 @@
 <strong>Age: </strong><%= @employee.oldest_ticket.age %></p>
 
 <p><strong>Assign a ticket using ticket id: </strong></p>
-<%= form_with url: "/employee_tickets", method: :post, local: true do |form| %>
+<%= form_with url: "/employees/#{@employee.id}/tickets", method: :post, local: true do |form| %>
   <%= form.label :ticket_id %>
   <%= form.text_field :ticket_id %><br><br>
-  <%= hidden_field_tag :employee_id, @employee.id %>
   <%= form.submit "Assign Ticket" %>
 <% end %>
 
