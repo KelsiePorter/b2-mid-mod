@@ -16,13 +16,14 @@ RSpec.describe 'the departments index' do
 
   it 'lists all of the departments with their name, floor, and associated employees' do 
     visit '/departments'
-    # save_and_open_page
     
     within "#department-#{@it.id}" do
       expect(page).to have_content(@it.name)
       expect(page).to have_content(@it.floor)
       expect(page).to have_content(@employee_1.name)
       expect(page).to have_content(@employee_2.name)
+      expect(page).to_not have_content(@employee_3.name)
+      expect(page).to_not have_content(@marketing.name)
     end
 
     within "#department-#{@accounting.id}" do
@@ -30,6 +31,8 @@ RSpec.describe 'the departments index' do
       expect(page).to have_content(@accounting.floor)
       expect(page).to have_content(@employee_3.name)
       expect(page).to have_content(@employee_4.name)
+      expect(page).to_not have_content(@employee_2.name)
+
     end
 
     within "#department-#{@marketing.id}" do
@@ -37,6 +40,7 @@ RSpec.describe 'the departments index' do
       expect(page).to have_content(@marketing.floor)
       expect(page).to have_content(@employee_5.name)
       expect(page).to have_content(@employee_6.name)
+      expect(page).to_not have_content(@employee_1.name)
     end
   end
 end
